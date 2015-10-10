@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item">
+    
+	<ImageView
+	    android:id="@+id/img_wb_item_head"
+	    android:layout_width="48dp"
+		android:layout_height="48dp"
+		android:src="@drawable/user_head"
+		android:layout_marginLeft="3dp"
+		android:layout_marginTop="5dp"/>
+		  
+		<!-- right side frame -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:orientation="vertical"
+			android:layout_height="wrap_content"
+			android:layout_margin="5dp">
+			
+		<!-- user name, offical auth part --> 
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			  
+		<!-- user name -->
+		<TextView 
+		    android:id="@+id/txt_wb_item_uname"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textColor="#424d54"
+		    android:textSize="15sp"
+		    />
+		
+		<!-- Auth -->
+		<ImageView 
+		    android:id="@+id/img_wb_item_V"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:visibility="gone"
+			android:src="@drawable/v"/>
+		
+			<RelativeLayout 
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:gravity="right">
+					  
+				<!-- post time -->
+				<TextView android:id="@+id/txt_wb_item_time"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:text="one hour ago"
+				    android:textColor="#efa608"
+				    android:textSize="12sp"/>  
+			</RelativeLayout>		  
+	 	</LinearLayout> 
+
+		<!-- content --> 
+	<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical">
+			
+			<!-- text content -->
+			<TextView android:id="@+id/txt_wb_item_content"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText"
+				android:textColor="#6b717b"
+				android:textSize="13sp"/>
+		    <!--   
+			<ImageView
+				android:id="@+id/img_wb_item_content_pic"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/user_head"
+			    android:layout_marginTop="3dp"
+			    android:visibility="gone"/>
+			-->
+			<com.rui.ruiweibo.ui.NoScrollGridView
+				android:id="@+id/img_wb_item_content_gridview"
+        		android:layout_width="220dp"
+        		android:layout_height="wrap_content"
+        		android:layout_marginLeft="5dp"
+        		android:layout_marginTop="3dp"
+        		android:columnWidth="70dp"
+        		android:gravity="center"
+        		android:horizontalSpacing="2.5dp"
+        		android:numColumns="3"
+        		android:stretchMode="columnWidth"
+        		android:verticalSpacing="2.5dp"/>
+			
+		</LinearLayout>
+
+		<!-- forward --> 
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/lyt_wb_item_sublayout"
+			android:orientation="vertical"
+			android:layout_marginTop="3dp"
+			android:visibility="gone"
+			android:background="@drawable/popup">
+ 
+			<!-- content -->
+			<TextView 
+				android:id="@+id/txt_wb_item_subcontent"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText"
+				android:textColor="#6b717b"
+				android:textSize="13sp"/> 
+			<!--  	 
+			 <ImageView
+				android:id="@+id/img_wb_item_content_subpic"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/user_head"
+				android:layout_marginTop="3dp"
+				android:visibility="gone"/>
+			 -->
+			 <com.rui.ruiweibo.ui.NoScrollGridView
+				android:id="@+id/img_wb_subitem_content_gridview"
+        		android:layout_width="250dp"
+        		android:layout_height="wrap_content"
+        		android:layout_marginLeft="5dp"
+        		android:layout_marginTop="3dp"
+        		android:columnWidth="100dp"
+        		android:gravity="center"
+        		android:horizontalSpacing="2.5dp"
+        		android:numColumns="3"
+        		android:stretchMode="columnWidth"
+        		android:verticalSpacing="2.5dp"/>
+			 		 
+		</LinearLayout>
+		<!-- resource --> 
+		<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_marginTop="3dp"
+		android:layout_marginBottom="3dp" >
+			 
+	  	 <!-- user name -->
+		<TextView 
+		android:id="@+id/txt_wb_item_from"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="from:ruiweibo"
+		android:textColor="#9ba0aa"
+		android:textSize="12sp"/>
+		
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="right">
+			
+			<TextView
+				android:id="@+id/txt_wb_item_redirect"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:drawableLeft="@drawable/redirect_icon"
+				android:text="10"
+				android:textColor="#9ba0aa"
+				android:textSize="13sp"/>
+			
+			<TextView 
+				android:id="@+id/txt_wb_item_comment"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="5dp"
+				android:drawableLeft="@drawable/comment_icon"
+				android:text="100"
+				android:textColor="#9ba0aa"
+				android:textSize="13sp"/>
+			
+  		 </LinearLayout>
+      </LinearLayout>
+  </LinearLayout>
+</LinearLayout>

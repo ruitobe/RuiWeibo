@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.app.FragmentTabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@android:id/tabhost"
+    android:background="#FFF9E0"
+    >
+	<TabWidget
+	     android:id="@android:id/tabs"
+	 	 android:layout_width="fill_parent"
+	     android:layout_height="wrap_content" 
+	     android:visibility="gone"/>
+	
+	<FrameLayout
+	     android:id="@android:id/tabcontent"
+		 android:layout_width="fill_parent"
+	     android:layout_height="fill_parent"/>
+	
+	<FrameLayout
+            android:id="@+id/realtabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+	
+	<RadioGroup
+	    android:id="@+id/main_radio"
+	    android:layout_width="fill_parent"
+	    android:layout_height="48dp"
+	    android:layout_gravity="bottom"
+	    android:orientation="horizontal"
+    	android:background="@drawable/bar" >
+    
+	    <RadioButton
+	        android:id="@+id/rb_home"
+	        android:drawableTop="@drawable/home_icon"
+	        style="@style/rg_style"
+	        android:text="Home" />
+	    
+	    <RadioButton
+	        android:id="@+id/rb_at"
+	        android:drawableTop="@drawable/at_icon"
+	        style="@style/rg_style"
+	        android:text="Me" />
+	    
+	    <RadioButton
+	        android:id="@+id/rb_mess"
+	        android:drawableTop="@drawable/msg_icon"      
+	        style="@style/rg_style"
+	        android:text="Message" />
+	    
+	    <RadioButton
+	        android:id="@+id/rb_more"      
+	        android:drawableTop="@drawable/more_icon"
+	        style="@style/rg_style"
+	        android:text="More" />
+	    	    	    
+	</RadioGroup>
+    
+</android.support.v4.app.FragmentTabHost>

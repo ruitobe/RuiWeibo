@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RuiWeibo</string>
+    <string name="action_settings">Settings</string>
+    <string name="weibo_toast_auth_canceled">Weibo Authentication Canceled</string>
+    <string name="weibo_toast_auth_succeed">Weibo Authentication Succeed</string>
+    <string name="weibo_toast_auth_failed">Weibo Authentication Failed</string>
+    <string name="weibo_token_has_existed">Your token is still valid, not need to login again.</string>
+    <string name="weibo_token_to_string_format_1">Token: %1$s \n Valid: %2$s</string>
+    <string name="authNoteContent">sign in for new user...</string>
+    <string name="authNote">Authentication</string>
+    <string name="login">Login</string>
+    <string name="loading">Loading...please wait</string>
+    <string name="weibo_image_indicator">%1$d/%2$d</string>
+
+</resources>
